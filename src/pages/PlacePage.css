@@ -1,0 +1,111 @@
+.place-page {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  border: 1.5px solid #dde3f5;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.place-hero {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-hero-emoji {
+  font-size: 100px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+}
+
+/* ── Content ──────────────────────────────────────────── */
+.place-content {
+  padding: 28px 32px 36px;
+}
+
+.place-tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3366cc;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 6px;
+}
+
+.place-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #0d0d33;
+  margin: 0 0 18px;
+}
+
+.place-description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a72;
+  margin: 0 0 28px;
+}
+
+/* ── Actions ──────────────────────────────────────────── */
+.place-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.place-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #00c16a;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.place-cta:hover {
+  background: #00a85a;
+}
+
+.place-back {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6670a0;
+  text-decoration: none;
+}
+
+.place-back:hover {
+  color: #3366cc;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .place-hero {
+    height: 160px;
+  }
+
+  .place-hero-emoji {
+    font-size: 76px;
+  }
+
+  .place-content {
+    padding: 20px 20px 28px;
+  }
+
+  .place-name {
+    font-size: 26px;
+  }
+}

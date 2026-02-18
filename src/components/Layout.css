@@ -1,0 +1,76 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f2f8;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: #fafaff;
+  border-bottom: 2px solid #3366cc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.layout-logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  color: #3366cc;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.layout-logo:hover {
+  color: #2255bb;
+}
+
+.layout-nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3366cc;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1.5px solid #3366cc;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.layout-nav-link:hover {
+  background: #3366cc;
+  color: #fff;
+}
+
+/* ── Main ─────────────────────────────────────────────── */
+.layout-main {
+  flex: 1;
+  padding: 32px 24px;
+}
+
+@media (max-width: 480px) {
+  .layout-main {
+    padding: 20px 16px;
+  }
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+.layout-footer {
+  padding: 18px 24px;
+  text-align: center;
+  background: #fafaff;
+  border-top: 1.5px solid #d0d8f0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #6670a0;
+}
+
+.layout-footer p {
+  margin: 0;
+}

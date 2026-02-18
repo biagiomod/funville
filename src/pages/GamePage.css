@@ -1,0 +1,212 @@
+.game-page {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.game-header {
+  text-align: center;
+}
+
+.game-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #0d0d33;
+  margin: 0 0 4px;
+}
+
+.game-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #6670a0;
+  margin: 0;
+}
+
+/* ── Stats ────────────────────────────────────────────── */
+.game-stats {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  border: 1.5px solid #dde3f5;
+  border-radius: 10px;
+  padding: 10px 24px;
+}
+
+.game-stat {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #6670a0;
+}
+
+.game-stat strong {
+  color: #0d0d33;
+}
+
+/* ── Grid ─────────────────────────────────────────────── */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+/* ── Card ─────────────────────────────────────────────── */
+.game-card {
+  aspect-ratio: 1;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  perspective: 500px;
+  border-radius: 12px;
+}
+
+.game-card:focus-visible {
+  outline: 2px solid #3366cc;
+  outline-offset: 2px;
+}
+
+/* The flipping inner container */
+.game-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+  border-radius: 12px;
+}
+
+.game-card--flipped .game-card-inner,
+.game-card--matched .game-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front face (hidden state) */
+.game-card-front,
+.game-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.game-card-front {
+  background: #eef2ff;
+  border: 2px solid #c5d0ee;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #3366cc;
+}
+
+/* Back face (revealed state) */
+.game-card-back {
+  background: #fff;
+  border: 2px solid #dde3f5;
+  font-size: 38px;
+  transform: rotateY(180deg);
+}
+
+.game-card--matched .game-card-back {
+  background: #e8fff3;
+  border-color: #00c16a;
+}
+
+/* ── Win screen ───────────────────────────────────────── */
+.game-win {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1.5px solid #dde3f5;
+  border-radius: 20px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-win-emoji {
+  font-size: 64px;
+  margin-bottom: 4px;
+}
+
+.game-win-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #0d0d33;
+  margin: 0;
+}
+
+.game-win-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #6670a0;
+  margin: 0 0 12px;
+}
+
+.game-win-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Shared buttons ───────────────────────────────────── */
+.game-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.game-btn--primary {
+  background: #00c16a;
+  color: #fff;
+  border: none;
+}
+
+.game-btn--primary:hover {
+  background: #00a85a;
+}
+
+.game-btn--ghost {
+  background: transparent;
+  color: #6670a0;
+  border: 1.5px solid #c5cce8;
+}
+
+.game-btn--ghost:hover {
+  background: #f0f2f8;
+  color: #0d0d33;
+  border-color: #a0aad4;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 380px) {
+  .game-grid {
+    gap: 8px;
+  }
+  .game-card-back {
+    font-size: 28px;
+  }
+}
